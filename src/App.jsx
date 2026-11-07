@@ -1,8 +1,13 @@
-import 
+// Implement dynamic routes in React Router to generate pages from data.
+
+//Imports
+import React from "react"
+import { Routes, Route, Link } from 'react-router-dom';
+
 
 export default function App() {
 
-  return(
+  return (
     <div>
 
       <BlogPost />
@@ -11,9 +16,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element= {<NavBar />} />
-        <Route path="/" element= {<Blog />} />
-        <Route path="/" element= {<BlogPost />} />
-
+        <Route path="*" element={<NotFoundPage />} />
 
       </Routes>
     </div>

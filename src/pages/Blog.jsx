@@ -70,12 +70,15 @@ export default function Blog({ posts, setPosts }) {
                 <button type="submit">Create Post</button>
             </form>
 
+            <h2>List of Posts</h2>
+
             {/* Display posts */}
             {posts.map((post) => (
-                <Link key={post.id} to={`/blog/${post.slug}`}>
-                    {post.title}
-                </Link>
-
+                <div key={post.id}>
+                    <Link to={`/blog/${post.slug}`}>
+                        {post.title}
+                    </Link>
+                </div>
             ))}
         </div>
     )

@@ -4,9 +4,9 @@
 import React, { useState } from "react";
 import { Routes, Route } from 'react-router-dom';
 
-import { BlogPost } from "./pages/BlogPost";
-import { Navbar } from "./components/Navbar";
-import { Blog } from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import Navbar from "./components/Navbar";
+import Blog from "./pages/Blog";
 
 
 export default function App() {

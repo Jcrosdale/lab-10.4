@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 export default function BlogPost({ posts }) {
 
+    // Read and use route parameters (slugs or IDs) to fetch and display data for a specific page.
     const { slug } = useParams();
     const post = posts.find((post) => post.slug === slug);
 
@@ -10,7 +11,7 @@ export default function BlogPost({ posts }) {
     if (!post) {
         return <p>Post Not Found</p>;
     }
-    
+
     return (
         <article>
             <h1>{post.title}</h1>

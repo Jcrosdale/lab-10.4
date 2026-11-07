@@ -1,7 +1,7 @@
 // Import
 import { useState } from "react"
 
-export default function BlogPost() {
+export default function BlogPost({ posts }) {
 
     // Create a simple in-memory array of blog post objects.
     const [posts, setPosts] = useState([]);

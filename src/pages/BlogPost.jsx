@@ -6,29 +6,15 @@ export default function BlogPost({ posts }) {
     const { slug } = useParams();
     const post = posts.find((post) => post.slug === slug);
 
-
+    // If a post with the given slug cannot be found, it should display a “Post not found” message.
+    if (!post) {
+        return <p>Post Not Found</p>;
+    }
+    
     return (
-        <>
-
-            <form onSubmit={handleSubmit}>
-                
-                <input
-                    name="title"
-                    value={post.title}
-                    onChange={handleChange}
-                    placeholder="Post title"
-                />
-
-                <textarea
-                    name="content"
-                    value={post.content}
-                    onChange={handleChange}
-                    placeholder="Write your post..."
-                />
-
-                <button type="submit">Create Post</button>
-
-            </form>
-        </>
+        <article>
+            <h1>{post.title}</h1>
+            <p>{post.content}</p>
+        </article>
     )
 }
